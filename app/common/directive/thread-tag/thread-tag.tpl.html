@@ -2,10 +2,74 @@
 	.tt-thread-tag-container {
 		border: solid #ccc 1px;
 		min-height: 150px;
+		box-shadow: 1px 1px 1px #ccc;
+	}
+	.tt-thread-tag-wrapper {
+		margin-bottom: 20px;
+	}
+	.tt-thread-tag-content {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+		.tt-thread-tag-content h4 {
+			margin: 0;
+		}
+		.tt-thread-tag-content .auther {
+			color: #aaa;
+			font-size: 8pt;
+			margin-bottom: 5px;
+		}
+		.tt-thread-tag-content .auther a {
+			color: #1D4567;
+
+		}
+	.tt-thread-tag-counter {
+		text-align: center;
+		padding-top: 20px;
+	}
+	.tt-thread-tag-counter span {
+		font-size: 17pt;
+	}
+	.tt-thread-tag-counter span.large {
+		font-size: 23pt;
+	}
+	.tt-thread-tag-readmore {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+
+	.clickable {
+		cursor: pointer;
+	}
+	.right {
+		float: right;
+	}
+	.indented{
+		margin: 5px;
 	}
 </style>
-<div class="row tt-thread-tag-container">
-	<div class="container">
-		123
+<div class="tt-thread-tag-wrapper">
+	<div class="row tt-thread-tag-container">
+		<div class="col-lg-1 ">
+			<div class="tt-thread-tag-counter">
+				<span class="clickable glyphicon glyphicon-chevron-up"></span><br/>
+				<span class="large">-23<br/></span>
+				<span class="clickable glyphicon glyphicon-chevron-down"></span><br/>
+			</div>
+		</div>
+		<div class="col-lg-11 tt-thread-tag-content">
+			<a><h4 class="clickable">Sample thread title ...</h4></a>
+			<div class="auther">
+				by <a>LC Zhao</a> 4 hours ago
+			</div>
+			<div>
+				sample content...<br/>
+				sample content...<br/>
+				sample content...<br/>
+				sample content...<br/>
+
+			</div>
+		</div>
 	</div>
 </div>

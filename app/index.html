@@ -14,11 +14,61 @@
 	<!-- directives -->
 	<script src="/common/directive/navbar/navbar.dir.js"></script>
 	<script src="/common/directive/thread-tag/thread-tag.dir.js"></script>
+
+
+	<style>
+		.profile-pic {
+			padding-left: 1em;
+			line-height: 10px; 
+			border-radius: 0;
+			border: solid 1px #ccc;
+			display: inline;
+		}
+		.user-profile {
+			width: 150px; 
+			position: fixed
+		}
+		.user-profile .btn {
+			border-radius: 0px !important;
+			text-align: left !important;
+		}
+	</style>
 </head>
 <body>
 	<section ng-controller="mainCtrl">
 		<tt-navbar items="items" caption="Talktive" home-url="/home"></tt-navbar>
 	</section>
-    <div class="container" ng-view></div>
+    <div class="container">
+    	<div class="row">
+    		<div class="col-lg-2" style="border-right: 1px solid #ccc; top: 0px; bottom: 0px;" >
+    			<div style="" class="user-profile">
+	    			
+	    			<div class="btn-group-vertical" style="width: 100%">
+	    				<button class="btn btn-primary active">Hot Topics</button>
+	    				<button class="btn btn-default">Following</button>
+	    				<button class="btn btn-default">My Forums</button>
+	    			</div>
+
+	    			<hr/>
+
+	    			<div class="btn-group-vertical" style="width: 100%">
+	    				<button class="btn btn-default">Profile</button>
+	    				<button class="btn btn-default">Achivement</button>
+	    				<button class="btn btn-default">Groups</button>
+	    				<button class="btn btn-default">Settings</button>
+	    			</div>
+
+	    			<hr/>
+
+	    			<div class="btn-group-vertical" style="width: 100%">
+	    				<button class="btn btn-default">Admin</button>
+	    			</div>
+    			</div>
+    		</div>
+    		<div class="col-lg-10" ng-view></div>
+    	</div>
+    	
+    </div>
+    
 </body>
 </html>

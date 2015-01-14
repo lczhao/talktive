@@ -10,7 +10,10 @@
 		$routeProvider
 			.when("/home", {
 				templateUrl: "/home/home.tpl.html",
-				//controller: "homeCtrl"
+				controller: "homeCtrl"
+			})
+			.when("/forums", {
+				templateUrl: "/forums/forums.tpl.html"
 			})
 			.otherwise({
 				redirectTo: "/home"
@@ -23,8 +26,8 @@
 				caption: "Home",
 				link: "/home"
 			}, {
-				caption: "About",
-				link: "/about"
+				caption: "Forums",
+				link: "/forums"
 			}
 		]
 	}])
