@@ -26,11 +26,17 @@
 		}
 		.user-profile {
 			width: 150px; 
-			position: fixed
+			position: fixed;
+			z-index: 1000;
+			background: white;
 		}
 		.user-profile .btn {
 			border-radius: 0px !important;
 			text-align: left !important;
+			border: none !important;
+		}
+		.user-profile .glyphicon {
+			padding-right: 10px;
 		}
 		.copyright {
 			font-size: 9pt;
@@ -38,6 +44,7 @@
 			padding-bottom: 20px;
 			text-align: center;
 		}
+		
 	</style>
 </head>
 <body>
@@ -50,24 +57,40 @@
     			<div style="" class="user-profile">
 	    			
 	    			<div class="btn-group-vertical" style="width: 100%">
-	    				<button class="btn btn-primary active">Hot Topics</button>
-	    				<button class="btn btn-default">Following</button>
-	    				<button class="btn btn-default">My Topics</button>
+	    				<button class="btn btn-primary active">
+	    					<span class="glyphicon glyphicon-comment"></span>Headlines
+	    				</button>
+	    				<button class="btn btn-default">
+	    					<span class="glyphicon glyphicon-star"></span>Following
+	    				</button>
+	    				<button class="btn btn-default">
+	    					<span class="glyphicon glyphicon-time"></span>My Talks
+	    				</button>
+	    				<button class="btn btn-default">
+	    					<span class="glyphicon glyphicon-globe"></span>Groups
+	    				</button>
 	    			</div>
 
 	    			<hr/>
 
 	    			<div class="btn-group-vertical" style="width: 100%">
-	    				<button class="btn btn-default">Profile</button>
-	    				<button class="btn btn-default">Achivement</button>
-	    				<button class="btn btn-default">Groups</button>
-	    				<button class="btn btn-default">Settings</button>
+	    				<button class="btn btn-default">
+	    					<span class="glyphicon glyphicon-user"></span>Profile
+	    				</button>
+	    				<button class="btn btn-default">
+	    					<span class="glyphicon glyphicon-certificate"></span>Achivement
+	    				</button>
+	    				<button class="btn btn-default">
+	    					<span class="glyphicon glyphicon-cog"></span>Settings
+	    				</button>
 	    			</div>
 
 	    			<hr/>
 
 	    			<div class="btn-group-vertical" style="width: 100%">
-	    				<button class="btn btn-default">Admin</button>
+	    				<button class="btn btn-default">
+	    					<span class="glyphicon glyphicon-wrench"></span>Admin
+	    				</button>
 	    			</div>
     			</div>
     		</div>
