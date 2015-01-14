@@ -32,6 +32,12 @@
 			border-radius: 0px !important;
 			text-align: left !important;
 		}
+		.copyright {
+			font-size: 9pt;
+			color: #aaa;
+			padding-bottom: 20px;
+			text-align: center;
+		}
 	</style>
 </head>
 <body>
@@ -40,13 +46,13 @@
 	</section>
     <div class="container">
     	<div class="row">
-    		<div class="col-lg-2" style="border-right: 1px solid #ccc; top: 0px; bottom: 0px;" >
+    		<div class="col-lg-2 col-md-2 col-sm-2" style="border-right: 1px solid #ccc; top: 0px; bottom: 0px;" >
     			<div style="" class="user-profile">
 	    			
 	    			<div class="btn-group-vertical" style="width: 100%">
 	    				<button class="btn btn-primary active">Hot Topics</button>
 	    				<button class="btn btn-default">Following</button>
-	    				<button class="btn btn-default">My Forums</button>
+	    				<button class="btn btn-default">My Topics</button>
 	    			</div>
 
 	    			<hr/>
@@ -65,10 +71,12 @@
 	    			</div>
     			</div>
     		</div>
-    		<div class="col-lg-10" ng-view></div>
+    		<div class="col-lg-10 col-md-10 col-sm-10" ng-view></div>
     	</div>
-    	
+    	<hr>
+    	<div class="row copyright">Talktive Tech, all right reserved &copy; 2014-2015</div>
     </div>
     
+
 </body>
 </html>

@@ -51,19 +51,19 @@
 </style>
 <div class="tt-thread-tag-wrapper">
 	<div class="row tt-thread-tag-container">
-		<div class="col-lg-1 ">
+		<div class="col-lg-1 col-md-1">
 			<div class="tt-thread-tag-counter">
-				<span class="clickable glyphicon glyphicon-chevron-up"></span><br/>
-				<span class="large">-23<br/></span>
-				<span class="clickable glyphicon glyphicon-chevron-down"></span><br/>
+				<span class="clickable glyphicon glyphicon-chevron-up" ng-click="upCountIncrease();"></span><br/>
+				<span class="large">{{upCount ? upCount : 0}}<br/></span>
+				<span class="clickable glyphicon glyphicon-chevron-down" ng-click="upCountDecrease();"></span><br/>
 			</div>
 		</div>
-		<div class="col-lg-11 tt-thread-tag-content">
+		<div class="col-lg-11 col-md-11 tt-thread-tag-content">
 			<a><h4 class="clickable">Sample thread title ...</h4></a>
 			<div class="auther">
 				by <a>LC Zhao</a> 4 hours ago
 			</div>
-			<div>
+			<div class="content">
 				sample content...<br/>
 				sample content...<br/>
 				sample content...<br/>
