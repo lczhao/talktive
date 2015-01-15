@@ -11,11 +11,12 @@
 	<script src="/vendor/angular/angular-route.js"></script>
 
 	<!-- app scripts -->
-	<script src="/src/app.js"></script>
+	<script src="/app.js"></script>
 	<script src="/home/home.ctrl.js"></script>
 	<!-- directives -->
 	<script src="/common/directive/navbar/navbar.dir.js"></script>
 	<script src="/common/directive/thread-tag/thread-tag.dir.js"></script>
+	<script src="/common/directive/user-tool-bar/user-tool-bar.dir.js"></script>
 
 
 	<style>
@@ -25,20 +26,6 @@
 			border-radius: 0;
 			border: solid 1px #ccc;
 			display: inline;
-		}
-		.user-profile {
-			width: 150px; 
-			position: fixed;
-			z-index: 1000;
-			background: white;
-		}
-		.user-profile .btn {
-			border-radius: 0px !important;
-			text-align: left !important;
-			border: none !important;
-		}
-		.user-profile .glyphicon {
-			padding-right: 10px;
 		}
 		.copyright {
 			font-size: 9pt;
@@ -56,45 +43,7 @@
     <div class="container">
     	<div class="row">
     		<div class="col-lg-2 col-md-2 col-sm-2" style="border-right: 1px solid #ccc; top: 0px; bottom: 0px;" >
-    			<div style="" class="user-profile">
-	    			
-	    			<div class="btn-group-vertical" style="width: 100%">
-	    				<button class="btn btn-primary active">
-	    					<span class="glyphicon glyphicon-comment"></span>Headlines
-	    				</button>
-	    				<button class="btn btn-default">
-	    					<span class="glyphicon glyphicon-star"></span>Following
-	    				</button>
-	    				<button class="btn btn-default">
-	    					<span class="glyphicon glyphicon-time"></span>My Talks
-	    				</button>
-	    				<button class="btn btn-default">
-	    					<span class="glyphicon glyphicon-globe"></span>Groups
-	    				</button>
-	    			</div>
-
-	    			<hr/>
-
-	    			<div class="btn-group-vertical" style="width: 100%">
-	    				<button class="btn btn-default">
-	    					<span class="glyphicon glyphicon-user"></span>User Profile
-	    				</button>
-	    				<button class="btn btn-default">
-	    					<span class="glyphicon glyphicon-tasks"></span>Reputations
-	    				</button>
-	    				<button class="btn btn-default">
-	    					<span class="glyphicon glyphicon-cog"></span>Settings
-	    				</button>
-	    			</div>
-
-	    			<hr/>
-
-	    			<div class="btn-group-vertical" style="width: 100%">
-	    				<button class="btn btn-default">
-	    					<span class="glyphicon glyphicon-wrench"></span>Admin
-	    				</button>
-	    			</div>
-    			</div>
+    			<user-tool-bar></user-tool-bar>
     		</div>
     		<div class="col-lg-10 col-md-10 col-sm-10" ng-view></div>
     	</div>

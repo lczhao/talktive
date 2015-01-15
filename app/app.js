@@ -1,7 +1,10 @@
 (function(angular, $){
 	var app = angular.module("app", [
 		"ngRoute",
+		//directives
 		"app.dir.tt-navbar",
+		"app.dir.user-tool-bar",
+		//features
 		"app.home"
 	]);
 
