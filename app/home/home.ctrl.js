@@ -18,6 +18,7 @@
 			
 			$scope.$digest();
 			
+			//simulates http request here..
 			$timeout(function (){
 				for(var i = 0; i < 5; i ++) {
 					$scope.threads.push({

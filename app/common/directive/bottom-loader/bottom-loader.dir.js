@@ -16,14 +16,20 @@
 				var windows = $($window);
 				
 				windows.scrollTop(0);
-				windows.on('scroll', function (){
+				var handle = function (){
 					if($window.scrollY + $window.innerHeight > element.position().top - 100) {
-						
+
 						if(scope.disableWhen) return;
 						
 						scope.handler();
 					}
-				});
+				}
+				windows.on('scroll', handle);
+
+				//prevent mem leap
+				scope.$on("$destroy", function (){
+					return $window.off('scroll', handle);
+				})
 			}
 		}
 	}])
