@@ -18,6 +18,9 @@
 			.when("/forums", {
 				templateUrl: "/forums/forums.tpl.html"
 			})
+			.when("/thread/:t", {
+				templateUrl: "/thread/thread.tpl.html",
+			})
 			.otherwise({
 				redirectTo: "/home"
 			});

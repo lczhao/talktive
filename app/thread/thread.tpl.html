@@ -1,0 +1,161 @@
+<style>
+	.tt-thread.wrapper {
+		min-height: 700px;
+		border: solid #ccc 1px;
+		box-shadow: 1px 1px 1px #ccc;
+	}
+	.tt-thread .content {
+		padding: 20px;
+	}
+	.tt-thread h3 {
+		margin: 0px;
+	}
+	.tt-thread .underline {
+		padding-bottom: 5px;
+		margin-bottom: 20px;
+		width: 100%;
+		border-bottom: 1px solid #eee;
+	}
+	.tt-thread .counter {
+		text-align: center;
+		padding-top: 0px;
+
+	}
+	.tt-thread .counter span {
+		font-size: 15pt;
+	}
+		.tt-thread .counter span:hover {
+			color: #337ab7;
+		}
+
+	.tt-thread .counter span.large {
+		font-size: 21pt;
+	}
+		.tt-thread .counter span.large:hover {
+			color: black;
+		}
+
+	.tt-thread .user-input * {
+		border-radius: 0px;
+	}
+</style>
+
+<div class="tt-thread wrapper">
+	<div class="content">
+		<div class="underline">
+			<h3>Sample Title</h3>
+		</div>
+		<div class="row">
+			<div class="col-lg-1 col-md-1">
+				<div class="counter">
+					<span class="clickable glyphicon glyphicon-chevron-up" ng-click="upCountIncrease();"></span><br/>
+					<span class="large">{{upCount ? upCount : 0}}<br/></span>
+					<span class="clickable glyphicon glyphicon-chevron-down" ng-click="upCountDecrease();"></span><br/>
+				</div>
+			</div>
+			<div class="col-lg-11 col-md-11">
+				Hey, I think talktive is awesome ... <br/>
+				sample content ... <br/>
+				sample content ... <br/>
+				sample content ... <br/>
+			</div>
+		</div>
+		<hr/>
+		<div class="underline">
+			<b>Talks</b>
+		</div>
+		<div class="row">
+			<div class="col-lg-1 col-md-1">
+				<div class="counter">
+					<span class="clickable glyphicon glyphicon-chevron-up" ng-click="upCountIncrease();"></span><br/>
+					<span class="large">{{upCount ? upCount : 0}}<br/></span>
+					<span class="clickable glyphicon glyphicon-chevron-down" ng-click="upCountDecrease();"></span><br/>
+				</div>
+			</div>
+			<div class="col-lg-11 col-md-11">
+				Hey, I think talktive is awesome ... <br/>
+				sample content ... <br/>
+				sample content ... <br/>
+				sample content ... <br/>
+			</div>
+		</div>
+		<hr />
+		<div class="row">
+			<div class="col-lg-1 col-md-1">
+				<div class="counter">
+					<span class="clickable glyphicon glyphicon-chevron-up" ng-click="upCountIncrease();"></span><br/>
+					<span class="large">{{upCount ? upCount : 0}}<br/></span>
+					<span class="clickable glyphicon glyphicon-chevron-down" ng-click="upCountDecrease();"></span><br/>
+				</div>
+			</div>
+			<div class="col-lg-11 col-md-11">
+				Hey, I think talktive is awesome ... <br/>
+				sample content ... <br/>
+				sample content ... <br/>
+				sample content ... <br/>
+			</div>
+		</div>
+		<hr />
+		<div class="row">
+			<div class="col-lg-1 col-md-1">
+				<div class="counter">
+					<span class="clickable glyphicon glyphicon-chevron-up" ng-click="upCountIncrease();"></span><br/>
+					<span class="large">{{upCount ? upCount : 0}}<br/></span>
+					<span class="clickable glyphicon glyphicon-chevron-down" ng-click="upCountDecrease();"></span><br/>
+				</div>
+			</div>
+			<div class="col-lg-11 col-md-11">
+				Hey, I think talktive is awesome ... <br/>
+				sample content ... <br/>
+				sample content ... <br/>
+				sample content ... <br/>
+			</div>
+		</div>
+		<hr />
+		<div class="row">
+			<div class="col-lg-1 col-md-1">
+				<div class="counter">
+					<span class="clickable glyphicon glyphicon-chevron-up" ng-click="upCountIncrease();"></span><br/>
+					<span class="large">{{upCount ? upCount : 0}}<br/></span>
+					<span class="clickable glyphicon glyphicon-chevron-down" ng-click="upCountDecrease();"></span><br/>
+				</div>
+			</div>
+			<div class="col-lg-11 col-md-11">
+				Hey, I think talktive is awesome ... <br/>
+				sample content ... <br/>
+				sample content ... <br/>
+				sample content ... <br/>
+			</div>
+		</div>
+		<hr />
+
+		<div class="underline">
+			<b>Your Talk</b>
+		</div>
+		<div class="row user-input">
+			<div class="col-lg-1 col-md-1 col-sm-1">
+				<div class="thumbnail">
+					<img src="..." height="100%" width="100%"/>
+				</div>
+			</div>
+			<div class="col-lg-10 col-md-10 col-sm-10">
+				<div class="form-group">
+					<div class="btn-group">
+						<button class="btn btn-default">B</button>
+						<button class="btn btn-default">I</button>
+					</div>
+				</div>
+				<div class="form-group">
+					<textarea class="form-control" rows="7" style="resize: none;"></textarea>
+				</div>
+				<div class="form-group">
+					<div style="text-align:right">
+						<button class="btn btn-primary">Talk about it</button>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	
+</div>
