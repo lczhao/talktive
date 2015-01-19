@@ -1,12 +1,21 @@
-You have to have node.js in order to run this app.
+##Talktive
+This is a forum template that acquire several key idea of modern web application design. <br/>
+This template is built in AnuglarJS and styled using bootstrap.<br/>
 
-First, download node.js from http://nodejs.org/
-then, install the node package express in the folder
 
-/usr/talktive $ npm install express
+###Installation
+You have to install node.js in order to run this app.
 
-Then, start up the server by
-$ node app.js
+First, download node.js from http://nodejs.org/<br/>
+
+Then, install the node package express in the repository folder
+    
+    $ cd /usr/Source/Repo/talktive
+    $ npm install express
+
+Then, start up the server by:
+
+    $ node app.js
 
 Finally open your browser, and visit http://localhost:3000/
 
