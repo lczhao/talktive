@@ -17,6 +17,7 @@
 	<script src="/common/directive/navbar/navbar.dir.js"></script>
 	<script src="/common/directive/thread-tag/thread-tag.dir.js"></script>
 	<script src="/common/directive/user-tool-bar/user-tool-bar.dir.js"></script>
+	<script src="/common/directive/bottom-loader/bottom-loader.dir.js"></script>
 
 
 	<style>
@@ -53,10 +54,12 @@
     		<div class="col-lg-2 col-md-2 col-sm-2" style="border-right: 1px solid #ccc; top: 0px; bottom: 0px;" >
     			<user-tool-bar></user-tool-bar>
     		</div>
-    		<div class="col-lg-10 col-md-10 col-sm-10" ng-view></div>
+    		<div class="col-lg-10 col-md-10 col-sm-10" ng-view autoscroll="true"></div>
     	</div>
     	<hr>
-    	<div class="row copyright">Talktive Tech, all right reserved &copy; 2014-2015</div>
+    	<div class="row copyright">
+    		Talktive Tech, all right reserved &copy; 2014-2015
+    	</div>
     </div>
     
 

@@ -7,20 +7,26 @@
 
 	app.directive("ttThreadTag", [
 		"threadTagConfig", 
-	function(threadTagConfig){
+		"$window",
+		"$sce",
+	function(threadTagConfig, $window, $sce){
 		return {
 			templateUrl: threadTagConfig.templateUrl + "thread-tag.tpl.html",
-			scope: {},
-			controller: ["$scope", "$http", function($scope, $http){
-				//get the up count using rest
-				$scope.upCount = 0;
-				$scope.upCountIncrease = function (){
-					$scope.upCount ++;
-				};
-				$scope.upCountDecrease = function () {
-					$scope.upCount --;
+			scope: {
+				caption: "=",
+				auther: "=",
+				votes: "=",
+				discription: "="
+			},
+			link: function (scope, element){
+				scope.discription = $sce.trustAsHtml(scope.discription);
+				scope.upCountIncrease = function () {
+					scope.votes ++;
 				}
-			}]
+				scope.upCountDecrease = function () {
+					scope.votes --;
+				}
+			}
 		}
 	}])
 })(angular, $);

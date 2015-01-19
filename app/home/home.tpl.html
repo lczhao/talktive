@@ -1,11 +1,16 @@
 <!-- Thread tag container -->
 <div>
-	<tt-thread-tag></tt-thread-tag>
-	<tt-thread-tag></tt-thread-tag>
-	<tt-thread-tag></tt-thread-tag>
-	<tt-thread-tag></tt-thread-tag>
-	<tt-thread-tag></tt-thread-tag>
-	<tt-thread-tag></tt-thread-tag>
-	<tt-thread-tag></tt-thread-tag>
+	<tt-thread-tag ng-repeat="thread in threads track by $index"
+		caption="thread.caption"
+		auther="thread.auther"
+		votes="thread.votes"
+		discription="thread.discription">
+	</tt-thread-tag>
 
+	<div ng-if="loading">
+		Loading ...... 
+	</div>
+	
+
+	<bottom-loader handler="loadThread" disable-when="loading"></bottom-loader>
 </div>
