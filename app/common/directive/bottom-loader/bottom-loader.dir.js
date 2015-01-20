@@ -17,7 +17,7 @@
 				
 				windows.scrollTop(0);
 				var handle = function (){
-					if($window.scrollY + $window.innerHeight > element.position().top - 100) {
+					if($window.scrollY + $window.innerHeight > element.position().top - 10) {
 
 						if(scope.disableWhen) return;
 						

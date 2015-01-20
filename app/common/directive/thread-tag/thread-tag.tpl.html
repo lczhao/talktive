@@ -41,21 +41,23 @@
 		.tt-thread-tag-counter span.large:hover {
 			color: black;
 		}
-	.tt-thread-tag-readmore {
-		position: absolute;
-		bottom: 0;
-		right: 0;
-	}
-
+        .tt-thread-tag-counter span.large.liked:hover {
+            color: #337ab7;
+        }
+        .tt-thread-tag-counter .liked {
+            color: #337ab7;
+        }
+            .tt-thread-tag-counter .liked:hover {
+                color: #286090;
+            }
 	
 </style>
 <div class="tt-thread-tag-wrapper">
 	<div class="row tt-thread-tag-container">
 		<div class="col-lg-1 col-md-1">
 			<div class="tt-thread-tag-counter">
-				<span class="clickable glyphicon glyphicon-chevron-up" ng-click="upCountIncrease();"></span><br/>
-				<span class="large">{{votes ? votes : 0}}<br/></span>
-				<span class="clickable glyphicon glyphicon-chevron-down" ng-click="upCountDecrease();"></span><br/>
+				<span class="large" ng-class="{liked: liked}">{{hotness ? hotness : 0}}<br/></span>
+				<span class="clickable glyphicon glyphicon-fire" ng-class="{liked: liked}" ng-click="toggleHotness();"></span><br/>
 			</div>
 		</div>
 		<div class="col-lg-11 col-md-11 tt-thread-tag-content">

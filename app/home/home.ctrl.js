@@ -24,7 +24,8 @@
 					$scope.threads.push({
 						caption: "Sample thread title " + i,
 						auther: "LC Zhao",
-						votes: 0,
+						hotness: 0,
+                        liked: false,
 						discription: "Sample content...<br/>Sample content...<br/>Sample content...<br/>Sample content...<br/>"
 					});
 				}
@@ -37,7 +38,8 @@
 				$scope.threads.push({
 					caption: "Sample thread title " + i,
 					auther: "LC Zhao",
-					votes: 0,
+					hotness: 0,
+                    liked: false,
 					discription: "Sample content...<br/>Sample content...<br/>Sample content...<br/>Sample content...<br/>"
 				});
 			}

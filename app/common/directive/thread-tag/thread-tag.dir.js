@@ -2,7 +2,7 @@
 	var app = angular.module("app.dir.thread-tag", []);
 
 	app.constant("threadTagConfig", {
-		templateUrl: "/common/directive/thread-tag/"
+		templateUrl: "./common/directive/thread-tag/"
 	})
 
 	app.directive("ttThreadTag", [
@@ -15,16 +15,22 @@
 			scope: {
 				caption: "=",
 				auther: "=",
-				votes: "=",
-				discription: "="
+				hotness: "=",
+				discription: "=",
+                liked: "="
 			},
 			link: function (scope, element){
-				scope.discription = $sce.trustAsHtml(scope.discription);
-				scope.upCountIncrease = function () {
-					scope.votes ++;
-				}
-				scope.upCountDecrease = function () {
-					scope.votes --;
+			    scope.discription = $sce.trustAsHtml(scope.discription);
+			    
+			    scope.toggleHotness = function () {
+			        if (scope.liked) {
+			            scope.hotness--;
+			            scope.liked = false;
+			        } else {
+			            scope.hotness = scope.hotness + 1;
+			            scope.liked = true;
+			        };
+				    
 				}
 			}
 		}
